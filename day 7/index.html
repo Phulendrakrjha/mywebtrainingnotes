@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>THIS IS A FULLY JAVASCRIPT PRACTICE PAGE</h2>
+
+
+    <script>
+        <!-- to build arrey -->
+        let ph=["GUAVA", "MANGO", "PAPAYA","APPLE"] 
+
+        console.log(ph)
+      <!-- to add any element in the end of array -->
+            ph.push("MELON")
+            console.log(ph);
+
+       <!-- to remove any element from the last -->
+            ph.pop();
+            console.log(ph);
+
+     <!-- to add any element in array from 1st -->
+            ph.unshift("TOMATO");
+            console.log(ph);
+
+      <!-- to remove 1st element from array -->
+            ph.shift()
+            console.log(ph);
+
+     <!-- to reverse the order of array -->
+            let reversedph= ph.reverse()
+            console.log(reversedph);
+
+    <!-- to write the fruit name in ascending order; -->
+            console.log(ph.sort())
+
+      <!-- to write the fruit name in descending order; -->
+            console.log(ph.reverse())
+
+   <!-- to print the fruits name as per required -->
+            for(let i=0; i<ph.length; i++ ) {
+
+         console.log(`i like ${ph[i]} to eat`)
+
+         }
+
+         console.log("printing fruits using for in loop")
+ for(let x in ph){
+    console.log(ph[x])
+ }
+
+ console.log("printing fruits using map")
+const newfruits= ph.map((item)=>{
+    console.log(item)
+})
+
+console.log("printing fruits using for each")
+ph.forEach((item)=>{
+    console.log(item)
+})
+
+const slicedfruits= ph.slice(2,5) 
+console.log("this is the printin of particular portion of an array", slicedfruits)
+
+const spliceddata = ph.splice(2,2,"ORANGE","PINEAPPLE")
+console.log("this is spliced data", ph)
+
+
+console.log("printing fruits using while loop")
+let i=0;
+        while(i<ph.length){
+            console.log("i like", ph[i])
+                     i++;
+                    } 
+
+                    <!-- TO CHECK IS SOMETHING PRESENT IN THE LIST -->
+                    const checkfruit= ph.includes("GUAVA")
+                    console.log(checkfruit)
+
+
+
+
+
+            const ages=[9,87,56,34,23,32,6,67,15]
+            console.log("this is a sorted ages in ascending order", ages.sort((a,b)=>a-b));
+            console.log("this is a sorted ages in descending  order", ages.sort((a,b)=>b-a));
+            console.log("printing ages of voters")
+            const voters= ages.filter((age)=>age>17)
+            console.log(voters)
+            console.log("printing ages of retired person")
+            const retired= ages.filter((age)=>age>60)
+            console.log(retired)
+ 
+            
+const student={
+    name: "Phulendra jha",
+     age: 18,
+    class: "CSE B",
+    rollno: 243125,
+    address:{
+        state:"Bihar",
+        city:"Samastipur",
+        pincode: "848210",
+        landmark: "Rosera",
+    }
+}
+ console.log(student.address.landmark)
+
+ <!-- to build an Object -->
+ const restaurant={
+    name: "tasty plaza",
+    service: "24hr",
+     employee: 12,
+     type: "pure veg",
+     address:{
+        state:"Haryana",
+        pincode: 122506,
+        city: "Farrukhnagar",
+        landmark:"st. Andrew Institute"
+     }
+
+}
+console.log(restaurant.type)
+console.log(restaurant.address.landmark)
+console.log(restaurant)
+
+<!-- spread operators             -->
+        let cars=["audi","mercedes", "jaguar", "tata", "Range Rover"]
+        let bikes=["bullet","splendor", "honda", "bullet", "bmw"]
+        let vechiles=[...cars,...bikes]
+        console.log(vechiles)
+
+        const addthenumbers=(...rest)=>{
+            const size=rest.length
+            let sum=0;
+            for(let i=0; i<size; i++){
+                sum+=rest[i];
+            }
+            console.log(sum)
+        }
+        addthenumbers(1,4,67,56,45,34,56,43,65,76)
+
+    </script>
+</body>
+</html>
