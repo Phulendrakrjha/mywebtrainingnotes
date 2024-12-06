@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            position: relative;
+        }
+
+        #heading {
+            text-align: center;
+            color: rgb(247, 244, 244);
+            background-position: center;
+            justify-content: center;
+            position: fixed;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            box-shadow: 10px 10px 100px 20px gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .box:hover{
+            transform: scale(1.1);
+           background-color: rgb(133, 123, 123);
+
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading"> <h1>Traffic light:-</h1> </div>
+
+    <div class="section">
+        <div id="box" class="box"></div>
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+    </div>
+
+    <script>
+        const resetTrafficLights = () => {
+            // Reset all traffic lights to their default state (gray)
+            let boxes = document.querySelectorAll('.box');
+            boxes.forEach(box => {
+                box.style.backgroundColor = 'gray';
+                box.style.boxShadow = '10px 10px 100px 20px gray';
+            });
+        };
+
+        const trafficLight = () => {
+            let sun = document.getElementById('box');
+            sun.addEventListener("click", () => {
+                resetTrafficLights(); // Reset other lights
+                sun.style.boxShadow = "10px 10px 100px 10px red";
+                sun.style.backgroundColor = "red";
+            });
+        };
+
+        const trafficLight1 = () => {
+            let sun = document.getElementById('box1');
+            sun.addEventListener("click", () => {
+                resetTrafficLights(); // Reset other lights
+                sun.style.boxShadow = "10px 10px 100px 10px yellow";
+                sun.style.backgroundColor = "yellow";
+            });
+        };
+
+        const trafficLight2 = () => {
+            let sun = document.getElementById('box2');
+            sun.addEventListener("click", () => {
+                resetTrafficLights(); // Reset other lights
+                sun.style.boxShadow = "10px 10px 100px 10px green";
+                sun.style.backgroundColor = "green";
+            });
+        };
+
+        trafficLight();
+        trafficLight1();
+        trafficLight2();
+    </script>
+</body>
+
+</html>

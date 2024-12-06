@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus{
+            outline: none;
+            border-color: #6c63ff;
+        }
+
+        .submit {
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit:hover {
+            background-color: #5a54e3;
+        }
+
+        .submit:active {
+            background-color: #4d48d3;
+        }
+
+        .alert {
+            text-align: center;
+            color: red;
+            font-size: 14px;
+        }
+#email{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="" onsubmit="handleSubmit(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" required> <br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required> <br>
+
+                <label for="cnfpassword">Confirm Password</label>
+                <input type="password" id="cnfpassword" required> <br>
+
+            <label for="email">email</label>
+            <input type="email" id="email" required> <br><br>
+    
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+    
+    <script>
+        const handleSubmit = () => {
+    
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const cnfpassword = document.getElementById('cnfpassword').value;
+            const email = document.getElementById('email').value;
+    
+            if (username === "" || password === "" || cnfpassword === "") {
+                window.alert("Please enter the required fields");
+                return;
+            }
+    
+            if (password.length < 8) {
+                window.alert("Please enter a stronger password");
+                return;
+            }
+    
+            if (cnfpassword !== password) {
+                window.alert("Passwords do not match");
+                return;
+            } else {
+                window.alert("Registration successful");
+            }
+        };
+
+        const validateEmail=(email)=>{
+if(email.includes(".") && email.includes("@")){
+return true
+}
+else{
+    return false
+}
+        };
+
+
+    </script>
+        
+    </body>
+    </html>

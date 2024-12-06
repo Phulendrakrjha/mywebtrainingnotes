@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1> DESTRUCTURING:-
+
+
+
+        
+    </H1>
+<script>
+    const restaurant ={
+        name: "foodie-hub",
+        owner:"Phulendra",
+        category:"veg",
+        rating:4.5,
+        address:{
+        state:"haryana",
+        city:"ambala",
+        street:"farrukhnagar"
+     }
+    };
+
+    try{
+        let{ name, owner}=restaurant;
+        console.log(name,owner);
+    }
+    catch (error) {
+        console.log("An error occurred: ", error);
+    }
+</script>
+
+</body>
+</html>

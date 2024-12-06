@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            position: relative;
+        }
+        
+        #heading {
+            text-align: center;
+            color: rgb(247, 244, 244);
+            background-position: center;
+            justify-content: center;       
+            position: fixed;
+            
+        }
+
+
+        #box {
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            box-shadow: 10px 10px 100px 20px gray;
+            border-radius: 50%;
+        }
+
+        #box1 {
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            box-shadow: 10px 10px 100px 20px gray;
+            border-radius: 50%;
+        }
+
+        #box2 {
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            box-shadow: 10px 10px 100px 20px gray;
+            border-radius: 50%;
+        }
+
+
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+        }
+    </style>
+</head>
+
+<body>
+   <div id="heading"> <h1>Traffic light:-</h1> </div>
+
+    <div class="section">
+
+        <div id="box"></div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
+
+
+    <script>
+        const trafficLight = () => {
+            let sun = document.getElementById('box')
+            
+                sun.addEventListener("click", () => {
+                    sun.style.boxShadow = "10px 10px 100px 10px red";
+                    sun.style.backgroundColor = "red";
+             }
+        ) }
+        trafficLight()
+
+        const trafficLight1 = () => {
+            let sun = document.getElementById('box1')
+            
+                sun.addEventListener("click", () => {
+                    sun.style.boxShadow = "10px 10px 100px 10px yellow";
+                    sun.style.backgroundColor = "yellow";
+             }
+        ) }
+        trafficLight1()
+
+        const trafficLight2 = () => {
+            let sun = document.getElementById('box2')
+            
+                sun.addEventListener("click", () => {
+                    sun.style.boxShadow = "10px 10px 100px 10px green";
+                    sun.style.backgroundColor = "green";
+             }
+        ) }
+        trafficLight2()
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
