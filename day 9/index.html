@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <h1><span id="age"> check your age</span></h1>
+<button onclick="voter()"> check your age </button>
+<script>
+   
+        const age =()=>{
+           let voter = window.prompt("please enter your age:")
+           let voter =document.getElementById("age")
+           if(age>=18){
+            check.innerHTML = "you are eligble to vote"
+           }
+           else{
+            check.innerHTML = "you are not eligble to vote"
+           }
+
+        } -->
+
+        <div class="checkAge">
+            <h1 id="check">Check your eligiblity</h1>
+            <button onclick="checkAge()">Check your age</button>
+    
+        </div>
+        <script>
+            const checkAge=()=>{
+                let age=window.prompt("please enter your age: ")
+                let check=document.getElementById("check")
+                if(age>=18){
+                    check.innerHTML="You are eligible to vote"
+                }
+                else{
+                    check.innerHTML="You are not eligible to vote"
+                }
+            }
+        </script>
+
+
+
+
+
+</body>
+</html>

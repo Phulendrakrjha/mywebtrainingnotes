@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="" onsubmit="handleSubmit()">
+            <label for="username">Username</label>
+            <input type="text" id="username" required> <br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required> <br><br>
+
+            <label for="cnfpassword">Confirm Password</label>
+            <input type="password" id="cnfpassword" required> <br><br>
+
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </div>
+
+<script>
+    const handleSubmit = () => {
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const cnfpassword = document.getElementById('cnfpassword').value;
+
+        if (username === "" || password === "" || cnfpassword === "") {
+            window.alert("Please enter the required fields");
+            return;
+        }
+
+        if (password.length < 8) {
+            window.alert("Please enter a stronger password");
+            return;
+        }
+
+        if (cnfpassword !== password) {
+            window.alert("Passwords do not match");
+            return;
+        } else {
+            window.alert("Registration successful");
+        }
+    };
+</script>
+
+</body>
+</html>
