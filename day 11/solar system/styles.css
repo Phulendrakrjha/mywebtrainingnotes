@@ -1,0 +1,155 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: black; /* Fixed typo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+  
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
+}
+  
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+}
+  
+.mercury {
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    animation: orbit 3s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -120px; /* Mercury's orbit radius */
+}
+  
+.venus {
+    width: 24px;
+    height: 24px;
+    background-color: orange;
+    animation: orbit 5s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -160px; /* Venus's orbit radius */
+}
+  
+.earth {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    animation: orbit 8s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -200px; /* Earth's orbit radius */
+}
+  
+.mars {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    animation: orbit 11s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -240px; /* Mars's orbit radius */
+}
+  
+.jupiter {
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+    animation: orbit 15s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -300px; /* Jupiter's orbit radius */
+}
+  
+.saturn {
+    width: 50px;
+    height: 50px;
+    background-color: goldenrod;
+    animation: orbit 18s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -350px; /* Saturn's orbit radius */
+}
+  
+.uranus {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    animation: orbit 21s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -400px; /* Uranus's orbit radius */
+}
+  
+.neptune {
+    width: 40px;
+    height: 40px;
+    background-color: darkblue;
+    animation: orbit 25s linear infinite;
+    animation-delay: 0s;
+    transform-origin: -450px; /* Neptune's orbit radius */
+}
+  
+/* Orbit Animation */
+@keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+/* Individual planet-specific durations */
+.mercury {
+    animation-duration: 3s;
+}
+
+.venus {
+    animation-duration: 5s;
+}
+
+.earth {
+    animation-duration: 8s;
+}
+
+.mars {
+    animation-duration: 11s;
+}
+
+.jupiter {
+    animation-duration: 15s;
+}
+
+.saturn {
+    animation-duration: 18s;
+}
+
+.uranus {
+    animation-duration: 21s;
+}
+
+.neptune {
+    animation-duration: 25s;
+}
